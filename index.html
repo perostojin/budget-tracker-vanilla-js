@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Budget Tracker</title>
 </head>
 <body>
-    
+    <h1>Budget Tracker</h1>
+    <form>
+        <label for="description" >Beskrivning av transaktion</label>
+        <textarea name="description" id="description" placeholder="Skriv en detaljerad beskrivning." required></textarea>
+
+        <label for="amount">Belopp (kr)</label>
+        <input type="number" id="amount" min="0.01" step="0.01" placeholder="0" required>
+
+        <label for="type">Typ av transaktion</label>
+        <select name="type" id="type" required>
+            <option value="inkomst">Inkomst (+)</option>
+            <option value="utgift">Utgift (-)</option>
+        </select>
+
+        <button id="add" type="submit" >Lägg till</button>
+
+    </form>
+
+    <h2>Transaktioner</h2>
+    <ul id="transaktionList" >
+
+    </ul>
+
+    <h3>Totalt saldo: <span id="totaltSaldo"></span> kr</h3>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
